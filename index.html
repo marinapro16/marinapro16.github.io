@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marina.Provencio's.Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+  <header class="hero-header">
+    <nav class="top-nav">
+      <!-- desktop links -->
+      <a class="nav-left" href="#">ABOUT ME</a>
+      <a class="nav-right" href="#">PERSONAL PROJECTS</a>
+
+
+      <button class="hamburger" id="hamburgerBtn"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+   
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#">ABOUT ME</a>
+        <a href="#">PERSONAL PROJECTS</a>
+      </div>
+    </nav>
+
+    <div class="divider"></div>
+
+    <div class="title-group">
+      <h1 class="name">MARINA PROVENCIO’S</h1>
+      <h2 class="portfolio">PORTFOLIO</h2>
+    </div>
+  </header>
+
+  <section class="below-section"></section>
+
+  <script>
+    const btn = document.getElementById('hamburgerBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', menu.classList.contains('open'));
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>
