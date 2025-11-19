@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marina Provencio's Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+  <header class="hero-header">
+    <nav class="top-nav">
+      <a class="nav-left" href="#">PERSONAL PROJECTS</a>
+      <a class="nav-right" href="#">ABOUT ME</a>
+
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#">ABOUT ME</a>
+        <a href="#">PERSONAL PROJECTS</a>
+      </div>
+    </nav>
+
+    <div class="title-group">
+      <h1 class="name">MARINA PROVENCIO</h1>
+    </div>
+  </header>
+
+  <section class="below-section">
+    <div class="video-grid">
+
+      <a href="#" class="video-card">
+        <div class="video-wrapper">
+          <video src="winncovervid1.mp4" autoplay muted loop playsinline>
+           
+          </video>
+          <div class="video-overlay">
+            <div class="overlay-box">
+              <span>Book Cover Design</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="video-card">
+        <div class="video-wrapper">
+          <video src="ptsdcovervid1.mp4" autoplay muted loop playsinline>
+           
+          </video>
+          <div class="video-overlay">
+            <div class="overlay-box">
+              <span>Social Campaign</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="video-card">
+        <div class="video-wrapper">
+          <video src="memcovervid1.mp4" autoplay muted loop playsinline>
+          
+          </video>
+          <div class="video-overlay">
+            <div class="overlay-box">
+              <span>Six Word Memoir</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="video-card">
+        <div class="video-wrapper">
+          <video src="excovervid1.mp4" autoplay muted loop playsinline>
+            
+          </video>
+          <div class="video-overlay">
+            <div class="overlay-box">
+              <span>Typography Hierarchy</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="video-card">
+        <div class="video-wrapper">
+          <video src="titlecovervid1.mp4" autoplay muted loop playsinline>
+         
+          </video>
+          <div class="video-overlay">
+            <div class="overlay-box">
+              <span>Title Sequence</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="video-card">
+        <div class="video-wrapper">
+          <video src="evolvecovervid1.mp4" autoplay muted loop playsinline>
+          
+          </video>
+          <div class="video-overlay">
+            <div class="overlay-box">
+              <span>Type Festival</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+  <footer class="site-footer">
+  <span class="footer-left">©2022—’25</span>
+  <span class="footer-right">marinaprovencio.design@gmail.com</span>
+</footer>
+
+  <script>
+    const btn = document.getElementById('hamburgerBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('open');
+      const isOpen = menu.classList.contains('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!menu.contains(event.target) && !btn.contains(event.target)) {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>

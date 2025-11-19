@@ -1,0 +1,239 @@
+html {
+  background-color: #8F8678;
+}
+
+body {
+  margin: 0;
+  background-color: #F1ECDA;
+  font-family: "Figtree", sans-serif;
+}
+
+.hero-header {
+  background-color: #758695;
+  text-align: center;
+  padding: 24px 40px 40px;
+  position: relative;
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.top-nav {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  z-index: 5;
+}
+
+.top-nav a {
+  color: #F1ECDA;
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+.title-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 80px);
+}
+
+.name {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: clamp(30px, 15vw, 135px);
+  margin-top: 35px;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger .bar {
+  width: 28px;
+  height: 2px;
+  background: #F1ECDA;
+  border-radius: 2px;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 60px;
+  right: 24px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 8;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  color: #8F8678;
+  padding: 14px 18px;
+  text-decoration: none;
+  display: block;
+}
+
+.mobile-menu a + a {
+  border-top: 1px solid #eeeeee;
+}
+
+.mobile-menu a:hover {
+  background: #f6f6f6;
+}
+
+.below-section {
+  background-color: #F1ECDA;
+  padding: 60px 80px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.video-card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0px 10px 20px rgba(70, 90, 105, 0.55);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.overlay-box {
+  background-color: #ffffff;
+  color: #8F8678;
+  padding: 12px 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.video-card:hover .video-overlay {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .top-nav .nav-left,
+  .top-nav .nav-right {
+    display: none;
+  }
+
+  .top-nav {
+    justify-content: flex-end;
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .name {
+    font-size: clamp(24px, 8vw, 40px);
+  }
+
+  .hero-header {
+    padding: 16px 20px 24px;
+  }
+
+  .below-section {
+    padding: 40px 20px;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .video-overlay {
+    display: none;
+  }
+}
+
+.site-footer {
+  background-color: #8F8678;   /* brown */
+  color: white;                /* white text */
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Figtree", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 40px;
+}
+body {
+  cursor: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewport='0 0 32 32' style='fill:%238F8678;'>\
+    <text y='50%' x='50%' dominant-baseline='middle' text-anchor='middle' font-size='26'>❤</text>\
+  </svg>") 16 16, auto;
+}
+.hero-header {
+  cursor: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewport='0 0 32 32' style='fill:%23F1ECDA;'>\
+    <text y='50%' x='50%' dominant-baseline='middle' text-anchor='middle' font-size='26'>❤</text>\
+  </svg>") 16 16, auto;
+}
+.site-footer {
+  cursor: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewport='0 0 32 32' style='fill:%23F1ECDA;'>\
+    <text y='50%' x='50%' dominant-baseline='middle' text-anchor='middle' font-size='26'>❤</text>\
+  </svg>") 16 16, auto;
+}
+
+
