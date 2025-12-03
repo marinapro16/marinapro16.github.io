@@ -6,6 +6,10 @@ body {
   margin: 0;
   background-color: #F1ECDA;
   font-family: "Figtree", sans-serif;
+  cursor: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewport='0 0 32 32' style='fill:%238F8678;'>\
+    <text y='50%' x='50%' dominant-baseline='middle' text-anchor='middle' font-size='26'>❤</text>\
+  </svg>") 16 16, auto;
 }
 
 .hero-header {
@@ -14,6 +18,10 @@ body {
   padding: 24px 40px 40px;
   position: relative;
   box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.35);
+  cursor: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewport='0 0 32 32' style='fill:%23F1ECDA;'>\
+    <text y='50%' x='50%' dominant-baseline='middle' text-anchor='middle' font-size='26'>❤</text>\
+  </svg>") 16 16, auto;
 }
 
 .top-nav {
@@ -168,6 +176,23 @@ body {
   opacity: 1;
 }
 
+.site-footer {
+  background-color: #8F8678;
+  color: white;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Figtree", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 40px;
+  cursor: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewport='0 0 32 32' style='fill:%23F1ECDA;'>\
+    <text y='50%' x='50%' dominant-baseline='middle' text-anchor='middle' font-size='26'>❤</text>\
+  </svg>") 16 16, auto;
+}
+
 @media (max-width: 768px) {
   .top-nav .nav-left,
   .top-nav .nav-right {
@@ -205,35 +230,161 @@ body {
   }
 }
 
-.site-footer {
-  background-color: #8F8678;   /* brown */
-  color: white;                /* white text */
-  padding: 18px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* subpages */
+
+.brown-page {
+  background-color: #8F8678;
+  margin: 0;
   font-family: "Figtree", sans-serif;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-top: 40px;
+  cursor: url("data:image/svg+xml,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewport='0 0 32 32' style='fill:%23F1ECDA;'>\
+    <text y='50%' x='50%' dominant-baseline='middle' text-anchor='middle' font-size='26'>❤</text>\
+  </svg>") 16 16, auto;
 }
-body {
+
+.brown-page .hero-header.sub-hero-header {
+  background-color: #F1ECDA;
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.35);
   cursor: url("data:image/svg+xml,\
   <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewport='0 0 32 32' style='fill:%238F8678;'>\
     <text y='50%' x='50%' dominant-baseline='middle' text-anchor='middle' font-size='26'>❤</text>\
   </svg>") 16 16, auto;
 }
-.hero-header {
-  cursor: url("data:image/svg+xml,\
-  <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewport='0 0 32 32' style='fill:%23F1ECDA;'>\
-    <text y='50%' x='50%' dominant-baseline='middle' text-anchor='middle' font-size='26'>❤</text>\
-  </svg>") 16 16, auto;
+
+.brown-page .sub-top-nav a {
+  color: #758695;
 }
-.site-footer {
+
+.sub-title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: calc(100% - 80px);
+  text-align: center;
+  padding-left: 35px;
+}
+
+.subpage-title {
+  color: #758695;
+  font-size: clamp(30px, 8vw, 80px);
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 40px 0 0;
+  text-align: center;
+}
+
+.subpage-content {
+  padding: 115px 80px;
+}
+
+/* ABOUT ME layout */
+
+.about-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.about-image {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  margin-left: 0px;
+}
+
+
+.about-text-block {
+  flex: 1;
+}
+
+.about-text-block p {
+  color: #F1ECDA;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+.about-contact-row {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.instagram-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.instagram-label {
+  color: #F1ECDA;
+  font-weight: 600;
+}
+
+.about-email {
+  color: #F1ECDA;
+  font-weight: 900;
+  margin-top: 8px;
+}
+
+/* subpage footer cursor */
+
+.sub-footer {
   cursor: url("data:image/svg+xml,\
   <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewport='0 0 32 32' style='fill:%23F1ECDA;'>\
     <text y='50%' x='50%' dominant-baseline='middle' text-anchor='middle' font-size='26'>❤</text>\
   </svg>") 16 16, auto;
 }
 
+.back-button {
+  display: none;
+  font-size: 22px;
+  text-decoration: none;
+  color: #8F8678;
+}
 
+.home-link {
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 24px;
+  color: #758695;
+}
+
+@media (max-width: 768px) {
+  .brown-page .sub-top-nav {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .brown-page .home-link {
+    display: none;
+  }
+
+  .brown-page .back-button {
+    display: block;
+  }
+
+  .sub-title-group {
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .subpage-title {
+    font-size: clamp(24px, 10vw, 48px);
+  }
+
+  .about-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    margin-left: 0;
+  }
+
+  .about-text-block {
+    width: 100%;
+  }
+}
